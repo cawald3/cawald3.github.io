@@ -17,8 +17,12 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+p {
+  font-weight: normal;
+}
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -154,7 +158,14 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
-// Card
+// Close Caption
+.closecaption {
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: -.7rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}// Card
 
 .card {
   background-color: var(--global-card-bg-color);
@@ -205,6 +216,28 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+.wrapped {
+  width: 100%;
+
+  .more-info {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: monospace;
+
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
+
+.wrapped.float-left {
+  margin-right: 1rem;
+}
+
+.wrapped.float-right {
+  margin-left: 1rem;
+}
 @media (min-width: 576px) {
   .profile {
     width: 30%;
