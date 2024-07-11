@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var modalContent = document.querySelector('.modal-content');
         var closeContent = document.querySelector('.close');
         var windowHeight = window.innerHeight;
+        var windowWidth = window.outerWidth;
         var contentHeight = modalContent.offsetHeight;
         var top = (windowHeight - contentHeight) / 2;
         modalContent.style.marginTop = top + 'px';   
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (xPosition > (windowHeight*.9)) {
             xPosition = windowHeight*.75
         }
-        closeContent.style.top = xPosition +'px'; 
+        closeContent.style.top = xPosition +'px';
+        closeContent.style.right = (windowWidth/2-20)+'px';
     }
 });
