@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         img.onclick = function() {
             modal.style.display = "block";
             modalImg.src = this.src;
+            modalImg.onload=function(){
+                centerModal();
+            };
+
         }
     });
 
@@ -18,5 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+    window.onresize = centerModal;
+
+    function centerModal() {
+        var modalContent = document.querySelector('.modal-content');
+        var closeContent = document.querySelector('.close');
+        var windowHeight = window.innerHeight;
+        var contentHeight = modalContent.offsetHeight;
+        var top = (windowHeight - contentHeight) / 2;
+        modalContent.style.marginTop = top + 'px';   
+        var xPosition = top+contentHeight + 10;
+        if (xPosition > (windowHeight*.9)) {
+            xPosition = windowHeight*.75
+        }
+        closeContent.style.top = xPosition +'px'; 
     }
 });
