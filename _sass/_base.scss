@@ -1129,8 +1129,11 @@ nav[data-toggle="toc"] {
   height: 400px;
   width: 100%;
 }
-
+swiper-container::part(slide){
+  height: 10px;
+}
 swiper-container::part(wrapper) {
+  margin-top: 15px;
   align-items: center;
 }
 .map {
@@ -1144,7 +1147,9 @@ swiper-container {
   --swiper-pagination-bullet-inactive-color: var(--global-text-color);
   align-items: center;
 }
-
+.limith{
+  max-height: 50%;
+}
 .zoomable
 {
   transition: transform 0.2s;
@@ -1173,8 +1178,14 @@ swiper-container {
   display: block;
   width: 80%;
   max-width: 700px;
+  max-height: 70%;
+  object-fit: contain;
+  background-color: rgba(0,0,0,0);
 }
 
+.swiper-slide-active{
+  cursor: pointer;
+}
 .close {
   position: absolute;
   top: 100%;
