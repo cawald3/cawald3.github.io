@@ -1,0 +1,16 @@
+{
+    "schedule": [
+      {
+        "time": "2024-07-13 20:59:28",
+        "file": "/sdcard/piano.wav"
+      },
+      {
+        "time": "2024-07-13 21:46:00",
+        "file": "/sdcard/pina.wav"
+      },
+      {
+        "time": "2024-07-28 11:15:00",
+        "file": "news1.mp3"
+      }
+    ]
+  }
